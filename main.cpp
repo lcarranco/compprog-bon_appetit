@@ -44,7 +44,12 @@ int main() {
     // cout << totalPrice << endl;
 
     totalPricePerPerson = totalPrice/numberPeoplepaying;
-    cout << totalPricePerPerson << endl;
+    // cout << totalPricePerPerson << endl;
+    
+    excludedItemPrice = bill.at(indexItemToExclude);
+    cout << excludedItemPrice << endl;
+
+    
     cout << endl;
     return 0;
 }
