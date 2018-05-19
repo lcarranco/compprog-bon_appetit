@@ -53,9 +53,12 @@ int main() {
     // cout << correctPricePerPerson << endl;
 
     refund = amountCharged - correctPricePerPerson;
-    cout << refund << endl;
+    // cout << refund << endl;
 
-
-    cout << endl;
+    if (refund != 0) {
+        cout << refund << endl;
+        return 0;
+    }
+    cout << "Bon Appetit";
     return 0;
 }
