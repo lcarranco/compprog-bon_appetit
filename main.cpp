@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <iostream>
 #include <queue>
+#include <vector>
 #include <sstream>
 
 using namespace std;
@@ -21,6 +22,7 @@ int main() {
     int numberItemsOrdered = numbers.front();
     // cout << numberItemsOrdered << endl;
     numbers.pop();
+    vector<int> bill;
     int indexItemToExclude = numbers.front();
     // cout << indexItemToExclude << endl;
     numbers.pop();
@@ -31,12 +33,18 @@ int main() {
     int totalPricePerPerson = 0;
     int correctPricePerPerson = 0;
     int refund = 0;
-    
 
-    while (!numbers.empty()) {
-        cout << numbers.front() << ' ';
+    for (int i = 0; i < numberItemsOrdered; ++i) {
+        totalPrice += numbers.front();
+        bill.push_back(numbers.front());
+        // cout << bill.at(i) << ' ';
         numbers.pop();
     }
+    numbers.pop();
+    // cout << totalPrice << endl;
+
+    totalPricePerPerson = totalPrice/numberPeoplepaying;
+    cout << totalPricePerPerson << endl;
     cout << endl;
     return 0;
 }
