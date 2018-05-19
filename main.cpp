@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <iostream>
-#include <fstream>
 #include <vector>
+#include <sstream>
 
 using namespace std;
 
@@ -18,7 +18,7 @@ int main() {
     }
 
     for (vector<int>::iterator it = numbers.begin(); it != numbers.end(); ++it) {
-        cout << *it;
+        cout << *it << ' ';
     }
     cout << endl;
     return 0;
