@@ -50,7 +50,10 @@ int main() {
     // cout << excludedItemPrice << endl;
 
     correctPricePerPerson = (totalPrice - excludedItemPrice) / numberPeoplepaying;
-    cout << correctPricePerPerson << endl;
+    // cout << correctPricePerPerson << endl;
+
+    refund = amountCharged - correctPricePerPerson;
+    cout << refund << endl;
 
 
     cout << endl;
